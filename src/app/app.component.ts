@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { List } from './list';
 
 @Component({
   selector: 'my-app',
@@ -15,19 +16,27 @@ export class AppComponent  {
 
    newTodo : string;
    name :string ; 
-   lists : string[] ;
+   
+   //lists : string[] ;
+   lists : List[];
+   newList : List;
+
 
    constructor(){
      
-     this.name = "TO-DO App";
-     this.lists = [];
-     this.newTodo =""
+     this.name = "TO-DO App1";
+     this.newTodo ="";
+     this.lists=[];
+
    }
+
    addList(){
+    var temp ={ content : ""};
+    temp.content = this.newTodo;
 
-    this.lists.push(this.newTodo);
-    this.newTodo = ""; 
+    this.lists.push(temp);
 
+    this.newTodo = "";
    }
 
    deleteList(index : number){
