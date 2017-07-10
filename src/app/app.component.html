@@ -1,0 +1,17 @@
+<h1>{{name}}</h1>
+
+<input [(ngModel)]="newTodo" type="text"/>
+
+<button (click)=addList()>ADD</button>
+
+
+<h2> LIST BELOW</h2>
+
+    <ul>
+        <li *ngFor="let item of lists; let i=index" >
+            {{item.content}} and {{i}}
+        <span>
+            <button (click)="deleteList(i)">DELETE</button>
+        </span>
+        </li>
+    </ul>
