@@ -6,18 +6,11 @@ import { List } from './list';
   templateUrl: './app.component.html',
 })
 
-// class List{
-
-//   content : string;
-//   highlight : boolean
-// }
 export class AppComponent  {
    
 
    newTodo : string;
    name :string ; 
-   
-   //lists : string[] ;
    lists : List[];
    newList : List;
 
