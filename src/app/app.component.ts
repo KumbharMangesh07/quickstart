@@ -4,6 +4,7 @@ import { List } from './list';
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 
 })
 
@@ -23,7 +24,8 @@ export class AppComponent  {
 
    addList() {
 
-    let temp = { content : ''};
+    let temp = { content : '',
+                isFlag: false};
     temp.content = this.newTodo;
 
     this.lists.push(temp);
@@ -39,5 +41,6 @@ export class AppComponent  {
    updateList(index: number , value: string) {
 
     this.lists[index].content = value;
+    this.lists[index].isFlag = !this.lists[index].isFlag;
    }
 }
