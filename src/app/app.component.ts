@@ -4,37 +4,36 @@ import { List } from './list';
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
-  
+
 })
 
 export class AppComponent  {
-  
-   newTodo : string;
-   name :string ; 
-   lists : List[];
-   newList : List;
 
-   constructor(){  
+   newTodo: string;
+   name: string;
+   lists: List[];
+   newList: List;
 
-     this.name = "TO-DO App1";
-     this.newTodo ="";
-     this.lists=[];
+   constructor() {
+     this.name = 'TO-DO App1';
+     this.newTodo = '';
+     this.lists = [];
 
    }
 
-   addList(){
+   addList() {
 
-    var temp ={ content : ""};
+    let temp = { content : ''};
     temp.content = this.newTodo;
 
     this.lists.push(temp);
-    this.newTodo = "";
+    this.newTodo = '';
    }
 
-   deleteList(index : number){
-    
-     this.lists.splice(index,1);
-    
+   deleteList(index: number) {
+
+     this.lists.splice(index, 1);
+
    }
 
    updateList(index : number , value : string){
