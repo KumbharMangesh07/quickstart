@@ -1,4 +1,4 @@
-export class List{
+export class List {
 
-    content : string;
+    content: string;
 }
