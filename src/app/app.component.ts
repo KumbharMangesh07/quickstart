@@ -36,8 +36,8 @@ export class AppComponent  {
 
    }
 
-   updateList(index : number , value : string){
+   updateList(index: number , value: string) {
 
-    this.lists[index].content=value;
+    this.lists[index].content = value;
    }
 }
