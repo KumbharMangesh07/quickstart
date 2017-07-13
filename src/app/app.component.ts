@@ -25,7 +25,7 @@ export class AppComponent  {
    addList() {
 
     let temp = { content : '',
-                isFlag: false};
+                isFlag: true};
     temp.content = this.newTodo;
 
     this.lists.push(temp);

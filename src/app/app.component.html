@@ -6,8 +6,8 @@
 
 <ul>
     <li *ngFor="let item of lists; let i=index">
-        <span (click)="item.isFlag=!item.isFlag" [ngClass]="{'active': item.isFlag}" >{{item.content}}</span>
-        <input #box (keyup.enter)=updateList(i,box.value) value={{item.content}}  [ngClass]="{'active': !item.isFlag}">
+        <span (click)="item.isFlag=!item.isFlag" *ngIf="item.isFlag" >{{item.content}}</span>
+        <input #box (keyup.enter)=updateList(i,box.value) value={{item.content}}  *ngIf="!item.isFlag">
         <span>
             <button (click)="deleteList(i)">DELETE </button>
         </span>
