@@ -1,15 +1,13 @@
 <h1>{{name}}</h1>
 
-<input [(ngModel)]="newTodo" type="text"/>
-
-<button (click)=addList()>ADD</button>
-
+<input [(ngModel)]="newTodo" type="text" (keyup.enter)=addList()/>
 
 <h2> LIST BELOW</h2>
 
     <ul>
         <li *ngFor="let item of lists; let i=index" >
-            {{item.content}} -- {{i}}
+            {{item.content}}
+            <input #box value={{item.content}} (keyup.enter)=updateList(i,box.value)/>
         <span>
             <button (click)="deleteList(i)">DELETE</button>
         </span>
